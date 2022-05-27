@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
     private bool cancellingWall;
     private bool onWall;
     private bool cancelling;
+    private bool forceCrouch;
 
     public float temp;
 
@@ -95,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.visible = false;
         readyToJump = true;
         wallNormalVector = Vector3.up;
+        forceCrouch = false;
     }
 
 
@@ -105,20 +107,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        int layerMask = 1 << 8;
-
-        // This would cast rays only against colliders in layer 8.
-        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-        layerMask = ~layerMask;
-        RaycastHit hit;
-
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up), out hit, temp, layerMask))
-        {
-            Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
-            //Debug.Log("Did Hit");
-        }
-
         MyInput();
         Look();
     }
@@ -148,15 +136,26 @@ public class PlayerMovement : MonoBehaviour
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftControl);
 
+        print(forceCrouch);
+
         //Crouching
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !forceCrouch)
             StartCrouch();
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || (forceCrouch == true && CanStand()))
             StopCrouch();
     }
 
     private void StartCrouch()
     {
+        if(!CanStand())
+        {
+            forceCrouch = true;
+        }
+        else
+        {
+            forceCrouch = false;
+        }
+
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.2f && grounded)
@@ -170,9 +169,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopCrouch()
     {
+        if (CanStand())
+        {
+            forceCrouch = false;
+            transform.localScale = playerScale;
+            transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+        }
+        else
+        {
+            forceCrouch = true;
+        }
         
-        transform.localScale = playerScale;
-        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+    }
+
+    private bool CanStand()
+    {
+        int layerMask = 1 << 8;
+
+        // This would cast rays only against colliders in layer 8.
+        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
+        layerMask = ~layerMask;
+        RaycastHit hit;
+
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up), out hit, temp, layerMask))
+        {
+            Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
+            return false;
+        }
+        return true;
+
     }
 
     private void Movement()
@@ -219,13 +245,11 @@ public class PlayerMovement : MonoBehaviour
         // Movement while sliding
         if (grounded && crouching && !crouchWalking) multiplierV = 0f;
 
-        if (grounded && crouching && crouchWalking)
+        if (grounded && crouching && crouchWalking || forceCrouch == true && !CanStand())
         {
-            //multiplier = 0.7f;
-            //multiplierV = 0.60f;
 
-            if (x > 0 && xMag > maxSpeed/2) x = 0;
-            if (x < 0 && xMag < -maxSpeed/2) x = 0;
+            if (x > 0 && xMag > maxSpeed/6) x = 0;
+            if (x < 0 && xMag < -maxSpeed/6) x = 0;
             if (y > 0 && yMag > maxSpeed/4) y = 0;
             if (y < 0 && yMag < -maxSpeed/4) y = 0;
         }
