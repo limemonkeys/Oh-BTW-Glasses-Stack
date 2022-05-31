@@ -104,6 +104,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
@@ -296,6 +297,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll"
 -r:"C:/Users/macbu/Oh BTW Glasses Stack/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"C:/Users/macbu/Oh BTW Glasses Stack/Library/PackageCache/com.unity.visualscripting@1.7.6/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Services.Core.Analytics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Services.Core.Environments.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Services.Core.ref.dll"
@@ -305,10 +307,33 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/ChangeGlasses.cs"
+"Assets/Scripts/CheckStandup.cs"
+"Assets/Scripts/Dialog/Text/TutorialCrouchWalk.cs"
+"Assets/Scripts/Dialog/Text/TutorialJump.cs"
+"Assets/Scripts/Dialog/Text/TutorialShades.cs"
+"Assets/Scripts/Dialog/Text/TutorialSlide.cs"
+"Assets/Scripts/Dialog/Text/TutorialSlideDown.cs"
+"Assets/Scripts/Dialog/Text/TutorialWalk.cs"
+"Assets/Scripts/Dialog/Text/TutorialWallRun.cs"
+"Assets/Scripts/Dialog/Triggers/DialogTrigger.cs"
+"Assets/Scripts/EndGame.cs"
+"Assets/Scripts/Headbob.cs"
+"Assets/Scripts/Interact.cs"
+"Assets/Scripts/LookAtTarget.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/PlayerInput.cs"
 "Assets/Scripts/PlayerMovement.cs"
+"Assets/Secret Santa Jam/Scripts/Damage/Teleporting.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/PlayerAndSanta.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/PlayerAndSanta2.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/TextWriter.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/Tutorial_2.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/Tutorial_2_Starter.cs"
+"Assets/Secret Santa Jam/Scripts/Dialog/UI_Assistant.cs"
+"Assets/Secret Santa Jam/Scripts/GameManager.cs"
+"Assets/Secret Santa Jam/Scripts/Menu/MainMenu.cs"
+"Assets/Secret Santa Jam/_/Stuff/CodeMonkey/Utils/Button_UI.cs"
 -langversion:9.0
 
 /deterministic

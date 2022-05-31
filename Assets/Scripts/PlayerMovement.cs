@@ -77,7 +77,11 @@ public class PlayerMovement : MonoBehaviour
     private bool cancelling;
     private bool forceCrouch;
 
+    public GameManager gameManager;
+
     public float temp;
+
+    public GameObject wallrunTutorial;
 
     public static PlayerMovement Instance { get; private set; }
 
@@ -100,22 +104,57 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    public void setMoveSpeed(float moveSpeed)
+    {
+        this.moveSpeed = moveSpeed;
+    }
+
+    public float getMoveSpeed()
+    {
+        return moveSpeed;
+    }
+
+    public bool isCrouching()
+    {
+        return crouching || crouchWalking || forceCrouch || Input.GetKeyDown(KeyCode.LeftControl);
+    }
+
     private void FixedUpdate()
     {
-        Movement();
+        if (gameManager.CanMove())
+        {
+            Movement();
+        }   
     }
 
     private void Update()
     {
-        MyInput();
-        Look();
+        if (gameManager.CanMove())
+        {
+            MyInput();
+            Look();
+        }
     }
 
     private void LateUpdate()
     {
         //call the wallrunning Function
-        WallRunning();
-        WallRunRotate();
+        if (wallrunTutorial == null)
+        {
+            WallRunning();
+            WallRunRotate();
+        }
+        
+    }
+
+    public bool PlayerMoving()
+    {
+        float playerVelocityZ = rb.velocity.z;
+        if(!((playerVelocityZ <= 0.001 && playerVelocityZ >= 0) || (playerVelocityZ >= -0.001 && playerVelocityZ <= 0)))
+        {
+            return true;
+        }
+        return false;
     }
 
     private void WallRunRotate()
@@ -136,7 +175,6 @@ public class PlayerMovement : MonoBehaviour
         jumping = Input.GetButton("Jump");
         crouching = Input.GetKey(KeyCode.LeftControl);
 
-        print(forceCrouch);
 
         //Crouching
         if (Input.GetKeyDown(KeyCode.LeftControl) && !forceCrouch)
@@ -167,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void StopCrouch()
+    public void StopCrouch()
     {
         if (CanStand())
         {
@@ -182,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private bool CanStand()
+    public bool CanStand()
     {
         int layerMask = 1 << 8;
 
@@ -483,7 +521,10 @@ public class PlayerMovement : MonoBehaviour
             }
             if (IsWall(normal) && (layer == (int)whatIsGround || (int)whatIsGround == -1 || layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("ground"))) //seriously what is this
             {
-                StartWallRun(normal);
+                if (wallrunTutorial == null)
+                {   
+                    StartWallRun(normal);
+                }
                 onWall = true;
                 cancellingWall = false;
                 CancelInvoke("StopWall");
