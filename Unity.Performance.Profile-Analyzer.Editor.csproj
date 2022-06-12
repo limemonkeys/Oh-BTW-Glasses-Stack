@@ -963,13 +963,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{44688c91-0ba7-1728-30c5-e5b3bf9b3038}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{049d270c-4eff-f746-f923-24eb72e58e49}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{44688c91-0ba7-1728-30c5-e5b3bf9b3038}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
       <Project>{3158b3e6-5621-df10-e7c7-bdcf02dd5207}</Project>
