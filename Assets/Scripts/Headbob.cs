@@ -10,7 +10,7 @@ public class Headbob : MonoBehaviour
     float defaultPosX = 0;
     float timer = 0;
 
-    public PlayerMovement playerMovement;
+    public TutorialPlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()

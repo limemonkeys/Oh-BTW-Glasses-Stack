@@ -7,7 +7,7 @@ public class ChangeGlasses : MonoBehaviour
 {
     public PostProcessVolume Volume;
     public ColorGrading ColorGrading;
-    public PlayerMovement playerMovement;
+    public TutorialPlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()

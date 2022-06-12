@@ -79,9 +79,8 @@ public class PlayerMovement : MonoBehaviour
 
     public GameManager gameManager;
 
-    public float temp;
+    public float uncrouchDifference;
 
-    public GameObject wallrunTutorial;
 
     public static PlayerMovement Instance { get; private set; }
 
@@ -124,6 +123,7 @@ public class PlayerMovement : MonoBehaviour
         if (gameManager.CanMove())
         {
             Movement();
+            
         }   
     }
 
@@ -138,12 +138,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        //call the wallrunning Function
-        if (wallrunTutorial == null)
-        {
-            WallRunning();
-            WallRunRotate();
-        }
+        WallRunning();
+        WallRunRotate();
         
     }
 
@@ -172,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
     {
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
-        jumping = Input.GetButton("Jump");
+        jumping = Input.GetButton("Jump") && !isCrouching();
         crouching = Input.GetKey(KeyCode.LeftControl);
 
 
@@ -230,7 +226,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit hit;
 
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up), out hit, temp, layerMask))
+        if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up), out hit, uncrouchDifference, layerMask))
         {
             Debug.DrawRay(new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.TransformDirection(Vector3.up) * hit.distance, Color.yellow);
             return false;
@@ -521,10 +517,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (IsWall(normal) && (layer == (int)whatIsGround || (int)whatIsGround == -1 || layer == LayerMask.NameToLayer("Ground") || layer == LayerMask.NameToLayer("ground"))) //seriously what is this
             {
-                if (wallrunTutorial == null)
-                {   
-                    StartWallRun(normal);
-                }
+                StartWallRun(normal);
                 onWall = true;
                 cancellingWall = false;
                 CancelInvoke("StopWall");

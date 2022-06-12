@@ -7,7 +7,7 @@ public class DialogTrigger : MonoBehaviour
     public GameObject DialogToTrigger;
     public GameObject TriggerObject;
     public GameObject PlayerCapsule;
-    public PlayerMovement playerMovement;
+    public TutorialPlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
