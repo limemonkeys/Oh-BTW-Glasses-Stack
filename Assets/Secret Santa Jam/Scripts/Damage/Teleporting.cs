@@ -13,4 +13,10 @@ public class Teleporting : MonoBehaviour
     {
         player.transform.position = teleportTarget.transform.position;
     }
+
+    void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Player") {
+            player.transform.position = teleportTarget.transform.position;
+        }
+    }
 }

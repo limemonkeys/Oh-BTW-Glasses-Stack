@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\Dialog\Text\TutorialCrouchWalk.cs" />
      <Compile Include="Assets\Scripts\Dialog\Text\TutorialShades.cs" />
      <Compile Include="Assets\Scripts\ChangeGlasses.cs" />
+     <Compile Include="Assets\Scripts\BouncyBall.cs" />
+     <Compile Include="Assets\Scripts\SpinningStick.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.2f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
