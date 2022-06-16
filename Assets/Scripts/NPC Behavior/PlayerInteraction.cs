@@ -14,6 +14,9 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
 
+    public PullDialog pullDialog;
+    public PushDialog pushDialog;
+
     GameManager gameManager;
 
     // Start is called before the first frame update
@@ -42,7 +45,7 @@ public class PlayerInteraction : MonoBehaviour
                 hitSomething = true;
                 interactionText.text = interactable.GetDescription();
  
-                if (Input.GetKeyDown(KeyCode.E)) {
+                if (Input.GetKeyDown(KeyCode.E) && pushDialog.IsFinishedLerp()) {
                     interactable.Interact();
                 }
             }

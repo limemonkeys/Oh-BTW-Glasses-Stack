@@ -16877,22 +16877,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5284097023607350295, guid: 2f899474d139a69489f0e473910a4003, type: 3}
   m_PrefabInstance: {fileID: 7850572612613151741}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1807962566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807962563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7916b92ef7d352d4488a123bde8026a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCam: {fileID: 243560442}
-  interactionDistance: 4
-  interactionUI: {fileID: 1058873415}
-  interactionText: {fileID: 1525105410}
 --- !u!114 &1807962573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16909,6 +16893,8 @@ MonoBehaviour:
   interactionDistance: 4
   interactionUI: {fileID: 1415275327}
   interactionText: {fileID: 179662105}
+  pullDialog: {fileID: 8151625718270702202}
+  pushDialog: {fileID: 8151625718270702203}
 --- !u!1001 &1808595689
 PrefabInstance:
   m_ObjectHideFlags: 0
