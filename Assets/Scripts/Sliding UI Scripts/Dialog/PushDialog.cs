@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PushDialog : MonoBehaviour
 {
+    public GameManager gameManager;
     public Transform startMarker;
     public Transform endMarker;
     public float speed = 1.0f;
@@ -25,6 +26,7 @@ public class PushDialog : MonoBehaviour
         {
             if (Mathf.Abs(endMarker.position.x - transform.position.x) < 0.1)
             {
+                gameManager.SetCanMove(true);
                 transform.position = endMarker.position;
                 finishedLerp = true;
             }

@@ -123,8 +123,12 @@ public class PlayerMovement : MonoBehaviour
         if (gameManager.CanMove())
         {
             Movement();
-            
+            rb.isKinematic = false;
         }   
+        else
+        {
+            rb.isKinematic = true;
+        }
     }
 
     private void Update()
@@ -133,6 +137,11 @@ public class PlayerMovement : MonoBehaviour
         {
             MyInput();
             Look();
+            rb.isKinematic = false;
+        }
+        else
+        {
+            rb.isKinematic = true;
         }
     }
 

@@ -45,6 +45,9 @@ public class SpecsIntro : MonoBehaviour
                     pushDialog.ResetVars();
                     pullDialog.ResetVars();
                     transform.gameObject.SetActive(false);
+                    //this.enabled = false;
+                    //Instantiate(this);
+                    //Destroy(gameObject);
                 }
                 else 
                 {
@@ -63,6 +66,7 @@ public class SpecsIntro : MonoBehaviour
 
     void Update()
     {
+        print(messageIndex);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
@@ -78,9 +82,11 @@ public class SpecsIntro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        print("Starting Specs intro");
         gameManager.SetCanMove(false);
         messageIndex = 0;
         // Write this message at a speed of 1 char per sec
         TextWriter.AddWriter_Static(messageText, "What's up buddy? Need some glasses? Check out my wears!", 0.05f, true, true, StopMewingSound);
     }
+    
 }

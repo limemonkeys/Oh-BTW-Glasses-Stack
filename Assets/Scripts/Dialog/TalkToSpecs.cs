@@ -9,6 +9,7 @@ public class TalkToSpecs : MonoBehaviour
     public PullDialog pullDialog;
     public PushDialog pushDialog;
     public GameObject DialogBox;
+    //public GameObject Dialogs;
     public bool awaitingDialog;
 
     // Start is called before the first frame update
@@ -16,9 +17,12 @@ public class TalkToSpecs : MonoBehaviour
     {
         gameManager.SetCanMove(false);
         pullDialog.ResetVars();
-        
-        
         awaitingDialog = true;
+    }
+
+    void ResetDialog()
+    {
+
     }
 
     // Update is called once per frame
@@ -31,6 +35,11 @@ public class TalkToSpecs : MonoBehaviour
             if (pullDialog.IsFinishedLerp())
             {
                 specsDialog.SetActive(true);
+                /*
+                GameObject originalGameObject = GameObject.Find(specsDialog.name);
+                Instantiate(originalGameObject);
+                specsDialog = GameObject.Find(specsDialog.name + "(Clone)");
+                */
                 awaitingDialog = false;
             }
             
@@ -42,11 +51,26 @@ public class TalkToSpecs : MonoBehaviour
             DialogBox.GetComponent<PullDialog>().enabled = false;
             DialogBox.GetComponent<PushDialog>().enabled = true;
         }
-        else if (pushDialog.IsFinishedLerp())
+        else if (pushDialog.IsFinishedLerp() && this.enabled)
         {
             DialogBox.GetComponent<PushDialog>().enabled = false;
+            /*
+            GameObject originalGameObject = GameObject.Find(specsDialog.name);
+            originalGameObject.SetActive(false);
+            Instantiate(originalGameObject);
+            print(originalGameObject.name);
+            specsDialog = GameObject.Find(specsDialog.name + "(Clone)");
+            originalGameObject.SetActive(true);
+            */
+            //GameObject child = originalGameObject.transform.GetChild(0).gameObject;
             this.enabled = false;
         }
     }
+
+    public void EnableWaitForDialog()
+    {
+        awaitingDialog = true;
+    }
     
+
 }
