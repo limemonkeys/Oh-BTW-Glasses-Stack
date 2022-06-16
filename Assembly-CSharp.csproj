@@ -47,7 +47,7 @@
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Inventory\Inventory Movement\InventorySlider.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\InventoryManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Dialog\FirstTimeTown.cs" />
+     <Compile Include="Assets\Scripts\Dialog\Triggers\Range\FirstTimeTown.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Inventory\Inventory Movement\PushInventory.cs" />
      <Compile Include="Assets\Scripts\NPC Behavior\IInteractable.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\StartPosition.cs" />
@@ -56,9 +56,9 @@
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Inventory\ItemSlotEquip.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
-     <Compile Include="Assets\Scripts\Dialog\Triggers\DialogTrigger.cs" />
+     <Compile Include="Assets\Scripts\Dialog\Triggers\Collision\DialogTrigger.cs" />
      <Compile Include="Assets\Old Projects\Secret Santa Jam\Scripts\Dialog\Tutorial_2_Starter.cs" />
-     <Compile Include="Assets\Scripts\Dialog\TalkToSpecs.cs" />
+     <Compile Include="Assets\Scripts\Dialog\Triggers\Range\TalkToSpecs.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\Scripts\Dialog\Text\Tutorial\TutorialWallRun.cs" />

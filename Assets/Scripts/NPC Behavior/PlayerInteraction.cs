@@ -14,10 +14,12 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -45,7 +47,13 @@ public class PlayerInteraction : MonoBehaviour
                 }
             }
         }
+
+        if (!gameManager.CanMove())
+        {
+            hitSomething = false;
+        }
  
+            
         interactionUI.SetActive(hitSomething);
     }
 }
