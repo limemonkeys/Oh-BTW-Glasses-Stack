@@ -90,8 +90,8 @@
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Logic\ApproximatelyEqual.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Variables\SaveVariables.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Math\Vector4\Vector4Minimum.cs" />
-     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Physics2D\OnTriggerEnter2D.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Physics\OnCollisionStay.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Physics2D\OnTriggerEnter2D.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\EditorBinding\UnitSubtitleAttribute.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Math\Vector3\Vector3CrossProduct.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Input\OnMouseEnter.cs" />
@@ -431,8 +431,8 @@
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Math\Scalar\ScalarAbsolute.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\IUnitDebugData.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Physics\TriggerEventUnit.cs" />
-     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\GUI\OnDropdownValueChanged.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Animation\OnAnimatorMove.cs" />
+     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\GUI\OnDropdownValueChanged.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Math\Vector2\Vector2Lerp.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Ports\IUnitValuePortDefinition.cs" />
      <Compile Include="Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Framework\Events\Navigation\OnDestinationReached.cs" />

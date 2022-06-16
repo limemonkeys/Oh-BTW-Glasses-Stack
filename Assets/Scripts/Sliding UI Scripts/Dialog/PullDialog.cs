@@ -17,6 +17,7 @@ public class PullDialog : MonoBehaviour
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
         wooshSfx.Play();
+        
     }
     void Update() {
         if (!finishedLerp)
@@ -25,7 +26,6 @@ public class PullDialog : MonoBehaviour
             {
                 transform.position = endMarker.position;
                 finishedLerp = true;
-                
             }
             else
             {

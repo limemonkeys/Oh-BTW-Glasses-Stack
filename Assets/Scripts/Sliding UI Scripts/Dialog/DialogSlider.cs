@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DialogSlider : MonoBehaviour
 {
+    public TownManager townManager;
     public GameObject Dialog;
     private bool dialogActive;
 
@@ -16,7 +17,8 @@ public class DialogSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!dialogActive)
+        /*
+        if (!dialogActive && townManager.getTextboxIdling())
         {
             //if (Input.GetKeyDown(KeyCode.Z) && !Dialog.GetComponent<PullDialog>().enabled)
             if (!Dialog.GetComponent<PullDialog>().enabled)
@@ -31,15 +33,14 @@ public class DialogSlider : MonoBehaviour
                 dialogActive = true;
             }
         }
-        if (dialogActive && !Input.GetMouseButton(0)) 
+        //if (dialogActive && !Input.GetMouseButton(0)) 
+        if (dialogActive && townManager.getTextboxIdling()) 
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            //if (Input.GetKeyDown(KeyCode.Z))
+            if (!Dialog.GetComponent<PushDialog>().enabled)
             {
-                if (!Dialog.GetComponent<PushDialog>().enabled)
-                {
-                    Dialog.GetComponent<PushDialog>().ResetVars();
-                    Dialog.GetComponent<PushDialog>().enabled = true;
-                }
+                Dialog.GetComponent<PushDialog>().ResetVars();
+                Dialog.GetComponent<PushDialog>().enabled = true;
             }
             if (Dialog.GetComponent<PushDialog>().IsFinishedLerp())
             {
@@ -49,5 +50,6 @@ public class DialogSlider : MonoBehaviour
                 
             }
         }
+        */
     }
 }

@@ -20,13 +20,13 @@ public class PushDialog : MonoBehaviour
         wooshSfx.Play();
     }
     void Update() {
+        print(finishedLerp);
         if (!finishedLerp)
         {
             if (Mathf.Abs(endMarker.position.x - transform.position.x) < 0.1)
             {
                 transform.position = endMarker.position;
                 finishedLerp = true;
-                
             }
             else
             {
