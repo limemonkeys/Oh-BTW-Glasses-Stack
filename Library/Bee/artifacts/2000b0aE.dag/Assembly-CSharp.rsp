@@ -376,6 +376,8 @@
 "Assets/Old Projects/Secret Santa Jam/Scripts/Menu/MainMenu.cs"
 "Assets/Old Projects/Secret Santa Jam/Scripts/TutorialGameManager.cs"
 "Assets/Old Projects/Secret Santa Jam/_/Stuff/CodeMonkey/Utils/Button_UI.cs"
+"Assets/Scripts/Dialog/Sprite Change/SpriteChange.cs"
+"Assets/Scripts/Dialog/Sprite Rotator/SpriteRoatator.cs"
 "Assets/Scripts/Dialog/Text/NPC/SpecsIntro.cs"
 "Assets/Scripts/Dialog/Text/Town/TownWelcome.cs"
 "Assets/Scripts/Dialog/Text/Tutorial/TutorialCrouchWalk.cs"

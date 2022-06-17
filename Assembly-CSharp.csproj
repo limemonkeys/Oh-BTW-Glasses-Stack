@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\Target Elimination\JumpPad.cs" />
      <Compile Include="Assets\Scripts\Scene Management\EndGame.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\Scripts\Dialog\Sprite Change\SpriteChange.cs" />
      <Compile Include="Assets\Scripts\Player\CheckStandup.cs" />
      <Compile Include="Assets\Old Projects\Secret Santa Jam\Scripts\Dialog\UI_Assistant.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
@@ -108,6 +109,7 @@
      <Compile Include="Assets\Scripts\Sliding UI Scripts\FollowDialogBox.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Inventory\ItemSlot.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
+     <Compile Include="Assets\Scripts\Dialog\Sprite Rotator\SpriteRoatator.cs" />
      <Compile Include="Assets\Old Projects\Secret Santa Jam\Scripts\Dialog\PlayerAndSanta2.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />

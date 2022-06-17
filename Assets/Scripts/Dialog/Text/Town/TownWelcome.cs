@@ -13,6 +13,8 @@ public class TownWelcome : MonoBehaviour
     public GameManager gameManager;
     public GameObject PlayerCapsule;
 
+    public GameObject theMan;
+
     private void Awake()
     {
         messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
@@ -45,6 +47,7 @@ public class TownWelcome : MonoBehaviour
                     gameManager.SetCanMove(true);
                     Cursor.lockState = CursorLockMode.Locked;
                     Cursor.visible = false;
+                    theMan.SetActive(false);
                     transform.gameObject.SetActive(false);
                 }
                 else 
