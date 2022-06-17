@@ -12,6 +12,7 @@ public class SpecsIntro : MonoBehaviour
     private int messageIndex;
     public GameManager gameManager;
     public GameObject PlayerCapsule;
+    public GameObject characterPortait;
     
     public PushDialog pushDialog;
     public PullDialog pullDialog;
@@ -44,6 +45,7 @@ public class SpecsIntro : MonoBehaviour
                     Cursor.visible = false;
                     pushDialog.ResetVars();
                     pullDialog.ResetVars();
+                    characterPortait.SetActive(false);
                     transform.gameObject.SetActive(false);
                     //this.enabled = false;
                     //Instantiate(this);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TalkToSpecs : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TalkToSpecs : MonoBehaviour
     public PullDialog pullDialog;
     public PushDialog pushDialog;
     public GameObject DialogBox;
+    public GameObject characterPortait;
     //public GameObject Dialogs;
     public bool awaitingDialog;
 
@@ -32,6 +34,7 @@ public class TalkToSpecs : MonoBehaviour
         {
             DialogBox.GetComponent<PushDialog>().enabled = false;
             DialogBox.GetComponent<PullDialog>().enabled = true;
+            characterPortait.SetActive(true);
             if (pullDialog.IsFinishedLerp())
             {
                 specsDialog.SetActive(true);
