@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemStorage : MonoBehaviour
 {
     public List<GameObject> Items;
-    public Text itemStorage;
+    public TextMeshProUGUI itemStorage;
 
 
     // Start is called before the first frame update
@@ -24,6 +25,12 @@ public class ItemStorage : MonoBehaviour
     public void PushItem(GameObject item)
     {
         Items.Add(item);
+        string buffText = "";
+        foreach (GameObject glasses in Items)
+        {
+            buffText += glasses.name + "\n";
+        }
+        itemStorage.text = buffText;
     }
 
     public void PopItem(GameObject item)
