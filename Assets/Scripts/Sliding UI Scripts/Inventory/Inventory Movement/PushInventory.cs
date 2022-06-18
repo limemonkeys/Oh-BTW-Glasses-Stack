@@ -27,10 +27,13 @@ public class PushInventory : MonoBehaviour
             {
                 transform.position = endMarker.position;
                 finishedLerp = true;
-                ;
+                
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+                gameManager.SetCanMove(true);
                 finishedLerp = false;
                 float distCovered = (Time.time - startTime) * speed;
                 float fracJourney = distCovered / journeyLength;

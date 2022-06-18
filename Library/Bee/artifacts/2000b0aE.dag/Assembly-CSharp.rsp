@@ -390,6 +390,7 @@
 "Assets/Scripts/Dialog/Triggers/Collision/DialogTrigger.cs"
 "Assets/Scripts/Dialog/Triggers/Range/FirstTimeTown.cs"
 "Assets/Scripts/Dialog/Triggers/Range/TalkToSpecs.cs"
+"Assets/Scripts/Inventroy Equip/BuffUpdater.cs"
 "Assets/Scripts/Managers/GameManager.cs"
 "Assets/Scripts/Managers/TownManager.cs"
 "Assets/Scripts/NPC Behavior/ColorChanger.cs"

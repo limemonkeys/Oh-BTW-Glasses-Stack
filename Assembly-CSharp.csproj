@@ -90,6 +90,7 @@
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
      <Compile Include="Assets\Scripts\Dialog\Text\Tutorial\TutorialSlideDown.cs" />
+     <Compile Include="Assets\Scripts\Inventroy Equip\BuffUpdater.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\Scripts\Target Elimination\TargetSpin.cs" />
      <Compile Include="Assets\Scripts\Target Elimination\JumpPad.cs" />

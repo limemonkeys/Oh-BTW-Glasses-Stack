@@ -32,6 +32,9 @@ public class PullInventory : MonoBehaviour
             }
             else
             {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+                gameManager.SetCanMove(false);
                 finishedLerp = false;
                 float distCovered = (Time.time - startTime) * speed;
                 float fracJourney = distCovered / journeyLength;
