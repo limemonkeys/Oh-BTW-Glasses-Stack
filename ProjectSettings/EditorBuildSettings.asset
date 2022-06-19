@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Town.unity
     guid: 43b68461796cbd246bee6c833aafb18f
   - enabled: 1
+    path: Assets/Scenes/ElimGrounds1.unity
+    guid: 070b25a943404d94682713519b3bb106
+  - enabled: 1
     path: Assets/Scenes/Day1.unity
     guid: 14dd7479097f57748a944ca18284696b
   m_configObjects: {}

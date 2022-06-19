@@ -314,6 +314,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Camera_SetStereoProjectionMatrix_Injected();
 		Register_UnityEngine_Camera_SetStereoProjectionMatrix_Injected();
 
+		//System.Void UnityEngine.Camera::ViewportPointToRay_Injected(UnityEngine.Vector2&,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Ray&)
+		void Register_UnityEngine_Camera_ViewportPointToRay_Injected();
+		Register_UnityEngine_Camera_ViewportPointToRay_Injected();
+
 		//System.Void UnityEngine.Camera::ViewportToWorldPoint_Injected(UnityEngine.Vector3&,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Vector3&)
 		void Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
 		Register_UnityEngine_Camera_ViewportToWorldPoint_Injected();
@@ -2325,6 +2329,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Random::Range(System.Single,System.Single)
 		void Register_UnityEngine_Random_Range();
 		Register_UnityEngine_Random_Range();
+
+		//System.Single UnityEngine.Random::get_value()
+		void Register_UnityEngine_Random_get_value();
+		Register_UnityEngine_Random_get_value();
 
 	//End Registrations for type : UnityEngine.Random
 

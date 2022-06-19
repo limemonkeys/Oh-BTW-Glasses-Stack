@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class SceneChanger : MonoBehaviour
 {
+    public ItemStorage itemStorage;
+    public ItemTracker itemTracker;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +25,9 @@ public class SceneChanger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene("Day1");
+            itemTracker.SaveEquips(itemStorage.GetItems());
+            DontDestroyOnLoad(itemTracker);
+            SceneManager.LoadScene("ElimGrounds1");
         }
     }
 }

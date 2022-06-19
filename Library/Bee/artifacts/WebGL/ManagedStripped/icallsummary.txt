@@ -65,6 +65,7 @@ UnityEngine.Camera::ResetStereoProjectionMatrices
 UnityEngine.Camera::ScreenPointToRay_Injected
 UnityEngine.Camera::ScreenToViewportPoint_Injected
 UnityEngine.Camera::SetStereoProjectionMatrix_Injected
+UnityEngine.Camera::ViewportPointToRay_Injected
 UnityEngine.Camera::ViewportToWorldPoint_Injected
 UnityEngine.Camera::WorldToScreenPoint_Injected
 UnityEngine.Camera::get_pixelRect_Injected
@@ -511,6 +512,7 @@ UnityEngine.Quaternion::Lerp_Injected
 UnityEngine.Quaternion::LookRotation_Injected
 UnityEngine.Random::RandomRangeInt
 UnityEngine.Random::Range
+UnityEngine.Random::get_value
 UnityEngine.RectOffset::get_bottom
 UnityEngine.RectOffset::get_horizontal
 UnityEngine.RectOffset::get_left

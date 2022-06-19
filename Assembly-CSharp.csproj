@@ -135,6 +135,8 @@
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Menu\PullMenu.cs" />
      <Compile Include="Assets\Scripts\Post Processing\ChangeGlasses.cs" />
+     <Compile Include="Assets\Scripts\Scene Management\ItemTracker.cs" />
+     <Compile Include="Assets\Scripts\Target Elimination\EffectApplier.cs" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
