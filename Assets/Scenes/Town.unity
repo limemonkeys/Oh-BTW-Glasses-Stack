@@ -16659,6 +16659,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8897952513405462684, guid: 380cabe9eec3a1f479012a73b7c7402c, type: 3}
   m_PrefabInstance: {fileID: 6835853626183030646}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1807962567 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7850572611132377649, guid: 380cabe9eec3a1f479012a73b7c7402c, type: 3}
+  m_PrefabInstance: {fileID: 6835853626183030646}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807962563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f7cba70fa15124ba857458e7c0f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1808595689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19655,6 +19666,10 @@ PrefabInstance:
       propertyPath: Volume
       value: 
       objectReference: {fileID: 122604894}
+    - target: {fileID: 2749864898384492561, guid: 3d9052667b47621409fa79008ee25b79, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 1807962567}
     - target: {fileID: 2749864898426775050, guid: 3d9052667b47621409fa79008ee25b79, type: 3}
       propertyPath: m_IsActive
       value: 0

@@ -113,6 +113,24 @@ public class PlayerMovement : MonoBehaviour
         return moveSpeed;
     }
 
+    public void setJumpForce(float jumpForce)
+    {
+        this.jumpForce = jumpForce;
+    }
+
+    public void setSlideCounterMovement(float slideCounterMovement)
+    {
+        this.slideCounterMovement = slideCounterMovement;
+    }
+
+    public void setSlideForce(float slideForce)
+    {
+        this.slideForce = slideForce;
+    }
+
+    
+
+
     public bool isCrouching()
     {
         return crouching || crouchWalking || forceCrouch || Input.GetKeyDown(KeyCode.LeftControl);

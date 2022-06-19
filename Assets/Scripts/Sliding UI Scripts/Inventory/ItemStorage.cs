@@ -14,6 +14,8 @@ public class ItemStorage : MonoBehaviour
     public PostProcessVolume Volume;
     public ColorGrading ColorGrading;
 
+    public PlayerMovement playerMovement;
+
     public Color32 hueColor;
     public Image Hue;
 
@@ -101,12 +103,14 @@ public class ItemStorage : MonoBehaviour
             buffText += "• Speed increased (x" + shades + ")\n";
             Volume.profile.TryGetSettings(out ColorGrading);
             ColorGrading.brightness.value = -30f * (float)((Mathf.Log(shades)/1.2) + 1.75); 
+            
         }
         else
         {
             Volume.profile.TryGetSettings(out ColorGrading);
             ColorGrading.brightness.value = 0f; 
         }
+        playerMovement.setMoveSpeed(4500f * (1 + (2 *shades)));
         
         
         if (purple > 0)
@@ -117,6 +121,8 @@ public class ItemStorage : MonoBehaviour
             //buffText += purple + " Purple \n";
             buffText += "• Jump height increased (x" + purple + ")\n";
         }
+        playerMovement.setJumpForce((float) (550f * (1 + (purple * 0.75))));
+
         if (alien > 0)
         {
             hueColor = new Color32(0, 0, 255, (byte) Mathf.Min((float) 42.5 * alien, 170f));
@@ -125,6 +131,8 @@ public class ItemStorage : MonoBehaviour
             //buffText += alien + " Alien \n";
             buffText += "• Slide distance increased (x" + alien + ")\n";
         }
+        playerMovement.setSlideCounterMovement( 0.2f * (Mathf.Pow(0.25f, alien)));
+
         if (fire > 0)
         {
             hueColor = new Color32(255, 0, 0, (byte) Mathf.Min((float) 42.5 * fire, 170f));
@@ -136,6 +144,7 @@ public class ItemStorage : MonoBehaviour
             
             buffText += "• Slide speed increased (x" + fire + ")\n";
         }
+        playerMovement.setSlideForce(400 * (2 *fire));
 
         float gronchoScale = 2f;
         if (groncho > 0)
