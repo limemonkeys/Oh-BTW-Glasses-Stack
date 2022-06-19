@@ -6,12 +6,16 @@ public class PullShop : MonoBehaviour
 {
     public Transform startMarker;
     public Transform endMarker;
+    public GameManager gameManager;
     public float speed = 1.0f;
     private float startTime;
     private float journeyLength;
 
     private bool finishedLerp;
     void Start() {
+        gameManager.SetCanMove(false);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
         finishedLerp = false;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);

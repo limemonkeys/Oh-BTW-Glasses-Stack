@@ -6,6 +6,7 @@ public class PushShop : MonoBehaviour
 {
     public Transform startMarker;
     public Transform endMarker;
+    public GameManager gameManager;
     public float speed = 1.0f;
     private float startTime;
     private float journeyLength;
@@ -15,6 +16,9 @@ public class PushShop : MonoBehaviour
         finishedLerp = false;
         startTime = Time.time;
         journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        gameManager.SetCanMove(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update() {
         if (!finishedLerp)

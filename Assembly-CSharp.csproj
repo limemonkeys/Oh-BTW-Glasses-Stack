@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\Dialog\Text\NPC\SpecsIntro.cs" />
      <Compile Include="Assets\Scripts\NPC Behavior\LookAtTarget.cs" />
      <Compile Include="Assets\Old Projects\Secret Santa Jam\_\Stuff\CodeMonkey\Utils\Button_UI.cs" />
+     <Compile Include="Assets\Scripts\Target Elimination\EffectApplier.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\Old Projects\Secret Santa Jam\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -118,6 +119,7 @@
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Inventory\Inventory Movement\PullInventory.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Scene Management\ItemTracker.cs" />
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Menu\PushMenu.cs" />
      <Compile Include="Assets\Scripts\Dialog\Text\Town\TownWelcome.cs" />
@@ -135,8 +137,6 @@
      <Compile Include="Assets\External Packages\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Scripts\Sliding UI Scripts\Menu\PullMenu.cs" />
      <Compile Include="Assets\Scripts\Post Processing\ChangeGlasses.cs" />
-     <Compile Include="Assets\Scripts\Scene Management\ItemTracker.cs" />
-     <Compile Include="Assets\Scripts\Target Elimination\EffectApplier.cs" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\External Packages\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
